@@ -1,0 +1,15 @@
+stop loss
+Roi
+
+Macd:
+Macd period: [5, 35]
+Macd line(fast macd): [2 , 44]
+Signal line (slow macd): [4, 58]
+
+Stochastic:
+Length: [5, 20]
+K : {2, 10]
+D ; {2, 10}
+
+RSI:
+Length:[4, 24]

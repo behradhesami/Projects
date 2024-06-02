@@ -1,0 +1,44 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |   Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------|
+| * Best |   2/100 |     1552 |   1027   247   278  66.2 |       -0.02% |        -7.075 USDT   (-0.07%) | 0 days 10:39:00 |     7.07511 |      1598.896 USDT   (14.18%) |
+| * Best |  10/100 |     1922 |   1015   655   252  52.8 |        0.04% |      1034.317 USDT   (10.34%) | 0 days 10:03:00 | -1,034.31682 |      2274.610 USDT   (17.09%) |
+| * Best |  13/100 |     1344 |    902   206   236  67.1 |        0.09% |      1377.888 USDT   (13.78%) | 0 days 16:11:00 | -1,377.88837 |      1493.335 USDT   (11.60%) |
+| * Best |  22/100 |     2030 |   1162   589   279  57.2 |        0.16% |      2217.926 USDT   (22.18%) | 0 days 10:49:00 | -2,217.92621 |      1620.862 USDT   (11.71%) |
+| * Best |  23/100 |     1650 |   1074   343   233  65.1 |        0.20% |      2842.585 USDT   (28.43%) | 0 days 13:43:00 | -2,842.58546 |      2542.256 USDT   (16.52%) |
+|   Best |  55/100 |     2068 |   1195   601   272  57.8 |        0.13% |      3074.463 USDT   (30.74%) | 0 days 11:34:00 | -3,074.46251 |      2449.629 USDT   (15.78%) |
+|   Best |  80/100 |     1389 |    945   246   198  68.0 |        0.15% |      3136.363 USDT   (31.36%) | 0 days 17:15:00 | -3,136.36323 |      1777.678 USDT   (11.92%) |
+ [Epoch 100 of 100 (100%)] ||                                                                                       | [Time:  3:23:44, Elapsed Time: 3:23:44]
+2023-01-12 13:02:32,773 - freqtrade.optimize.hyperopt - INFO - 100 epochs saved to '/root/Desktop/freqtrade/freqtrade/user_data/hyperopt_results/strategy_zemastoch1_1_2023-01-12_09-35-40.fthypt'.
+2023-01-12 13:02:32,880 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/freqtrade/freqtrade/user_data/strategies/zemastoch1_1.json
+
+Best result:
+
+    80/100:   1389 trades. 945/246/198 Wins/Draws/Losses. Avg profit   0.15%. Median profit   0.11%. Total profit 3136.36322707 USDT (  31.36%). Avg duration 17:15:00 min. Objective: -3136.36323
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "ema_fast_period": 34,
+        "ema_long_period": 10,
+        "fastd_period": 4,
+        "fastk_period": 2,
+        "lenght_period": 15,
+    }
+
+    # ROI table:
+    minimal_roi = {
+        "0": 0.232,
+        "22": 0.083,
+        "73": 0.03,
+        "135": 0
+    }
+
+    # Stoploss:
+    stoploss = -0.333
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy

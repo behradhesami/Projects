@@ -1,0 +1,2 @@
+ "cross_buy": [-100, -50]
+ "short_cross": [50, 100]

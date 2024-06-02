@@ -1,0 +1,41 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+--------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |    Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+--------------+-------------------------------|
+| * Best |   1/100 |     1772 |   1231     0   541  69.5 |        0.16% |      2662.148 USDT   (26.62%) | 0 days 10:26:00 | -2,662.14805 |      1165.338 USDT    (9.00%) |
+| * Best |   3/100 |     1828 |   1269     0   559  69.4 |        0.17% |      2751.098 USDT   (27.51%) | 0 days 10:02:00 | -2,751.09822 |       893.249 USDT    (6.90%) |
+| * Best |  10/100 |     1798 |   1261     0   537  70.1 |        0.20% |      3039.589 USDT   (30.40%) | 0 days 09:56:00 | -3,039.58935 |       956.423 USDT    (7.39%) |
+| * Best |  11/100 |     1881 |   1304     0   577  69.3 |        0.16% |      3367.303 USDT   (33.67%) | 0 days 10:01:00 | -3,367.30302 |      1036.737 USDT    (7.73%) |
+| * Best |  29/100 |     1889 |   1331     0   558  70.5 |        0.22% |      3845.775 USDT   (38.46%) | 0 days 09:41:00 | -3,845.77495 |      1188.478 USDT    (8.55%) |
+ [Epoch 100 of 100 (100%)] ||                                                                                       | [Time:  3:00:27, Elapsed Time: 3:00:27]
+2023-01-21 07:52:10,788 - freqtrade.optimize.hyperopt - INFO - 100 epochs saved to '/root/Desktop/freqtrade/freqtrade/user_data/hyperopt_results/strategy_Momentum_OPT_2023-01-21_04-48-18.fthypt'.
+2023-01-21 07:52:10,789 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/freqtrade/freqtrade/user_data/strategies/Momentum_OPT.json
+
+Best result:
+
+*   29/100:   1889 trades. 1331/0/558 Wins/Draws/Losses. Avg profit   0.22%. Median profit   2.00%. Total profit 3845.77495301 USDT (  38.46%). Avg duration 9:41:00 min. Objective: -3845.77495
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "fast_macd": 8,
+        "fastk_period": 8,
+        "rsi_period": 9,
+        "signal_period": 33,
+        "slow_macd": 44,
+        "slowd_period": 8,
+        "slowk_period": 8,
+    }
+
+    # ROI table:  # value loaded from strategy
+    minimal_roi = {
+        "0": 0.02
+    }
+
+    # Stoploss:
+    stoploss = -0.04  # value loaded from strategy
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy

@@ -1,0 +1,45 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |   Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------|
+| * Best |   5/100 |     1114 |    649   244   221  58.3 |        0.03% |       -76.541 USDT   (-0.77%) | 0 days 14:55:00 |     76.5411 |      1451.981 USDT   (13.20%) |
+| * Best |   7/100 |     1368 |    821   281   266  60.0 |        0.04% |       626.647 USDT    (6.27%) | 0 days 13:41:00 |    -626.647 |       986.215 USDT    (9.14%) |
+| * Best |  14/100 |      943 |    578   158   207  61.3 |        0.10% |      1129.957 USDT   (11.30%) | 0 days 19:57:00 | -1,129.95657 |       740.311 USDT    (6.24%) |
+|   Best |  40/100 |     1498 |    827   440   231  55.2 |        0.20% |      2233.152 USDT   (22.33%) | 0 days 13:20:00 | -2,233.15222 |      1080.552 USDT    (9.27%) |
+|   Best |  87/100 |     1613 |   1021   249   343  63.3 |        0.12% |      2356.710 USDT   (23.57%) | 0 days 12:24:00 | -2,356.70962 |      1385.325 USDT   (11.84%) |
+|   Best |  97/100 |     1201 |    815   161   225  67.9 |        0.18% |      2444.335 USDT   (24.44%) | 0 days 17:19:00 | -2,444.33507 |      1118.372 USDT    (8.25%) |
+ [Epoch 100 of 100 (100%)] ||                                                                                       | [Time:  3:05:55, Elapsed Time: 3:05:55]
+2023-01-21 18:06:59,521 - freqtrade.optimize.hyperopt - INFO - 100 epochs saved to '/root/Desktop/freqtrade/freqtrade/user_data/hyperopt_results/strategy_Momentum_OPT_2023-01-21_14-58-10.fthypt'.
+2023-01-21 18:06:59,522 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/freqtrade/freqtrade/user_data/strategies/Momentum_OPT.json
+
+Best result:
+
+    97/100:   1201 trades. 815/161/225 Wins/Draws/Losses. Avg profit   0.18%. Median profit   0.34%. Total profit 2444.33506682 USDT (  24.44%). Avg duration 17:19:00 min. Objective: -2444.33507
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "fast_macd": 25,
+        "fastk_period": 11,
+        "rsi_period": 7,
+        "signal_period": 21,
+        "slow_macd": 7,
+        "slowd_period": 2,
+        "slowk_period": 2,
+    }
+
+    # ROI table:
+    minimal_roi = {
+        "0": 0.047,
+        "33": 0.024,
+        "55": 0.01,
+        "167": 0
+    }
+
+    # Stoploss:
+    stoploss = -0.247
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy

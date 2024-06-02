@@ -1,0 +1,44 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+--------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |    Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+---------d-----+-------------------------------+-----------------+--------------+-------------------------------|
+| * Best |   8/100 |     1018 |    685   154   179  67.3 |        0.22% |      2249.928 USDT   (22.50%) | 0 days 14:15:00 | -2,249.92819 |      1632.396 USDT   (13.53%) |
+|   Best |  65/100 |      791 |    541   122   128  68.4 |        0.28% |      2486.966 USDT   (24.87%) | 0 days 17:49:00 | -2,486.96627 |      1261.706 USDT    (9.18%) |
+ [Epoch 100 of 100 (100%)] ||                                                                                       | [Time:  3:28:40, Elapsed Time: 3:28:40]
+2023-01-25 09:52:53,262 - freqtrade.optimize.hyperopt - INFO - 100 epochs saved to '/root/Desktop/tEST/freqtrade/user_data/hyperopt_results/strategy_LuxOSC1_1_2023-01-25_06-20-25.fthypt'.
+2023-01-25 09:52:53,264 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/tEST/freqtrade/user_data/strategies/LuxOSC1_1.json
+
+Best result:
+
+    65/100:    791 trades. 541/122/128 Wins/Draws/Losses. Avg profit   0.28%. Median profit   0.09%. Total profit 2486.96626548 USDT (  24.87%). Avg duration 17:49:00 min. Objective: -2486.96627
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "cross_buy": -54,
+        "length_buy": 32,
+        "mult_buy": 80,
+        "short_cross": 58,
+        "smooth_buy": 49,
+    }
+
+    # Sell hyperspace params:
+    sell_params = {
+        "cross_sell": 77,
+    }
+
+    # ROI table:
+    minimal_roi = {
+        "0": 0.177,
+        "19": 0.081,
+        "70": 0.012,
+        "172": 0
+    }
+
+    # Stoploss:
+    stoploss = -0.343
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy

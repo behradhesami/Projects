@@ -1,0 +1,43 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |   Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------|
+| * Best |   1/200 |     1312 |    897   184   231  68.4 |        0.04% |       566.484 USDT    (5.66%) | 0 days 15:42:00 |    -566.484 |      2131.077 USDT   (16.78%) |
+| * Best |  13/200 |     1846 |   1150   350   346  62.3 |       -0.03% |       784.934 USDT    (7.85%) | 0 days 09:43:00 |    -784.934 |      2456.645 USDT   (20.40%) |
+| * Best |  17/200 |     1895 |   1182   455   258  62.4 |        0.11% |      1650.473 USDT   (16.50%) | 0 days 11:03:00 | -1,650.47281 |      1942.452 USDT   (14.29%) |
+| * Best |  18/200 |     2436 |   1464   549   423  60.1 |        0.08% |      2036.340 USDT   (20.36%) | 0 days 07:40:00 | -2,036.34010 |      1451.185 USDT   (12.18%) |
+| * Best |  26/200 |     1472 |    940   278   254  63.9 |        0.14% |      2075.586 USDT   (20.76%) | 0 days 14:58:00 | -2,075.58592 |      2275.406 USDT   (15.86%) |
+|   Best |  51/200 |     1862 |   1279   319   264  68.7 |        0.23% |      3969.083 USDT   (39.69%) | 0 days 12:01:00 | -3,969.08335 |      1329.562 USDT    (8.69%) |
+ [Epoch 200 of 200 (100%)] ||                                                                                       | [Time:  6:45:08, Elapsed Time: 6:45:08]
+2023-01-09 20:35:28,055 - freqtrade.optimize.hyperopt - INFO - 200 epochs saved to '/root/Desktop/freqtrade/freqtrade/user_data/hyperopt_results/strategy_zemastoch1_1_2023-01-09_13-46-23.fthypt'.
+2023-01-09 20:35:28,058 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/freqtrade/freqtrade/user_data/strategies/zemastoch1_1.json
+
+Best result:
+
+    51/200:   1862 trades. 1279/319/264 Wins/Draws/Losses. Avg profit   0.23%. Median profit   0.24%. Total profit 3969.08335183 USDT (  39.69%). Avg duration 12:01:00 min. Objective: -3969.08335
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "ema_fast_period": 30,
+        "ema_long_period": 23,
+        "fastd_period": 5,
+        "fastk_period": 2,
+        "lenght_period": 8,
+    }
+
+    # ROI table:
+    minimal_roi = {
+        "0": 0.271,
+        "15": 0.074,
+        "58": 0.011,
+        "140": 0
+    }
+
+    # Stoploss:
+    stoploss = -0.317
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy

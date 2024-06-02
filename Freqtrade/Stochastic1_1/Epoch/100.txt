@@ -1,0 +1,42 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+--------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |    Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+--------------+-------------------------------|
+| * Best |   3/100 |     1521 |   1040   225   256  68.4 |        0.13% |      2018.219 USDT   (20.18%) | 0 days 13:22:00 | -2,018.21947 |      2274.322 USDT   (15.91%) |
+|   Best |  53/100 |     1600 |   1033   311   256  64.6 |        0.14% |      2284.267 USDT   (22.84%) | 0 days 14:33:00 | -2,284.26705 |      2397.088 USDT   (16.33%) |
+|   Best |  75/100 |     1553 |   1079   262   212  69.5 |        0.17% |      2407.897 USDT   (24.08%) | 0 days 13:43:00 | -2,407.89699 |      1278.269 USDT    (9.34%) |
+|   Best |  83/100 |     1764 |   1215   266   283  68.9 |        0.19% |      2771.475 USDT   (27.71%) | 0 days 13:05:00 | -2,771.47482 |      1997.127 USDT   (13.52%) |
+ [Epoch 100 of 100 (100%)] ||                                                                                       | [Time:  3:20:07, Elapsed Time: 3:20:07]
+2023-01-09 13:29:08,081 - freqtrade.optimize.hyperopt - INFO - 100 epochs saved to '/root/Desktop/freqtrade/freqtrade/user_data/hyperopt_results/strategy_zemastoch1_1_2023-01-09_10-05-03.fthypt'.
+2023-01-09 13:29:08,088 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/freqtrade/freqtrade/user_data/strategies/zemastoch1_1.json
+
+Best result:
+
+    83/100:   1764 trades. 1215/266/283 Wins/Draws/Losses. Avg profit   0.19%. Median profit   0.19%. Total profit 2771.47482252 USDT (  27.71%). Avg duration 13:05:00 min. Objective: -2771.47482
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "ema_fast_period": 36,
+        "ema_long_period": 57,
+        "fastd_period": 5,
+        "fastk_period": 3,
+        "lenght_period": 10,
+    }
+
+    # ROI table:
+    minimal_roi = {
+        "0": 0.038,
+        "39": 0.023,
+        "54": 0.012,
+        "161": 0
+    }
+
+    # Stoploss:
+    stoploss = -0.307
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy
+

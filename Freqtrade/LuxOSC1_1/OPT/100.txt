@@ -1,0 +1,46 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |   Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------|
+| * Best |   4/100 |      809 |    441   224   144  54.5 |        0.03% |       103.505 USDT    (1.04%) | 0 days 17:14:00 |    -103.505 |      2274.178 USDT   (20.12%) |
+| * Best |  12/100 |     1018 |    519   326   173  51.0 |        0.12% |      1224.608 USDT   (12.25%) | 0 days 10:49:00 | -1,224.60800 |      1320.822 USDT   (10.53%) |
+|   Best |  43/100 |      748 |    456   154   138  61.0 |        0.35% |      3044.307 USDT   (30.44%) | 0 days 15:31:00 | -3,044.30740 |       728.206 USDT    (5.29%) |
+ [Epoch 100 of 100 (100%)] ||                                                                                       | [Time:  2:55:55, Elapsed Time: 2:55:55]
+2023-01-24 13:39:17,710 - freqtrade.optimize.hyperopt - INFO - 100 epochs saved to '/root/Desktop/tEST/freqtrade/user_data/hyperopt_results/strategy_LuxOSC1_1_2023-01-24_10-39-45.fthypt'.
+2023-01-24 13:39:17,714 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/tEST/freqtrade/user_data/strategies/LuxOSC1_1.json
+
+Best result:
+
+    43/100:    748 trades. 456/154/138 Wins/Draws/Losses. Avg profit   0.35%. Median profit   0.03%. Total profit 3044.30740294 USDT (  30.44%). Avg duration 15:31:00 min. Objective: -3044.30740
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "cross_buy": -54,
+        "length_buy": 42,
+        "mult_buy": 96,
+        "short_cross": 23,
+        "smooth_buy": 11,
+    }
+
+    # Sell hyperspace params:
+    sell_params = {
+        "cross_sell": 3,
+    }
+
+    # ROI table:
+    minimal_roi = {
+        "0": 0.178,
+        "18": 0.036,
+        "75": 0.015,
+        "129": 0
+    }
+
+    # Stoploss:
+    stoploss = -0.268
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy
+

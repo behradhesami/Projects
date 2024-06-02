@@ -1,0 +1,43 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+--------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |    Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+--------------+-------------------------------|
+| * Best |   1/200 |     1830 |   1271     0   559  69.5 |        0.16% |      2332.399 USDT   (23.32%) | 0 days 09:39:00 | -2,332.39879 |      1359.201 USDT   (10.47%) |
+| * Best |   2/200 |     1900 |   1332     0   568  70.1 |        0.20% |      3582.110 USDT   (35.82%) | 0 days 09:57:00 | -3,582.11008 |      1187.012 USDT    (8.47%) |
+| * Best |   5/200 |     1894 |   1332     0   562  70.3 |        0.22% |      3691.576 USDT   (36.92%) | 0 days 09:56:00 | -3,691.57637 |      1059.424 USDT    (9.44%) |
+/root/Desktop/freqtrade/env/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py:700: UserWarning: A worker stopped while some jobs were given to the executor. This can be caused by a too short worker timeout or by a memory leak.
+  warnings.warn(
+|   Best |  54/200 |     1824 |   1294     0   530  70.9 |        0.25% |      3743.651 USDT   (37.44%) | 0 days 10:07:00 | -3,743.65078 |      1110.997 USDT    (9.94%) |
+|   Best |  55/200 |     1894 |   1334     0   560  70.4 |        0.23% |      3808.802 USDT   (38.09%) | 0 days 09:56:00 | -3,808.80160 |      1059.424 USDT    (9.44%) |
+ [Epoch 200 of 200 (100%)] ||                                                                                       | [Time:  6:08:16, Elapsed Time: 6:08:16]
+2023-01-20 23:50:02,331 - freqtrade.optimize.hyperopt - INFO - 200 epochs saved to '/root/Desktop/freqtrade/freqtrade/user_data/hyperopt_results/strategy_Momentum_OPT_2023-01-20_17-38-26.fthypt'.
+2023-01-20 23:50:02,332 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/freqtrade/freqtrade/user_data/strategies/Momentum_OPT.json
+
+Best result:
+
+    55/200:   1894 trades. 1334/0/560 Wins/Draws/Losses. Avg profit   0.23%. Median profit   2.00%. Total profit 3808.80160087 USDT (  38.09%). Avg duration 9:56:00 min. Objective: -3808.80160
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "fast_macd": 38,
+        "fastk_period": 12,
+        "rsi_period": 24,
+        "signal_period": 23,
+        "slow_macd": 52,
+        "slowd_period": 10,
+        "slowk_period": 3,
+    }
+
+    # ROI table:  # value loaded from strategy
+    minimal_roi = {
+        "0": 0.02
+    }
+
+    # Stoploss:
+    stoploss = -0.04  # value loaded from strategy
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy

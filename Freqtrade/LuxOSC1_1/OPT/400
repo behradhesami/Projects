@@ -1,0 +1,47 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |   Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------|
+| * Best |   1/100 |     1426 |    801   447   178  56.2 |        0.05% |       662.907 USDT    (6.63%) | 0 days 10:10:00 |    -662.907 |      1897.280 USDT   (17.01%) |
+| * Best |   3/100 |     1265 |    803   298   164  63.5 |        0.12% |      1492.411 USDT   (14.92%) | 0 days 11:06:00 | -1,492.41112 |      2182.414 USDT   (18.68%) |
+|   Best |  40/100 |      975 |    677   157   141  69.4 |        0.16% |      1596.890 USDT   (15.97%) | 0 days 14:44:00 | -1,596.89049 |      1471.115 USDT   (11.91%) |
+|   Best |  56/100 |     1351 |    909   245   197  67.3 |        0.14% |      1751.047 USDT   (17.51%) | 0 days 10:17:00 | -1,751.04672 |      2725.561 USDT   (21.99%) |
+ [Epoch 100 of 100 (100%)] ||                                                                                       | [Time:  3:27:41, Elapsed Time: 3:27:41]
+2023-01-25 13:51:06,737 - freqtrade.optimize.hyperopt - INFO - 100 epochs saved to '/root/Desktop/tEST/freqtrade/user_data/hyperopt_results/strategy_LuxOSC1_1_2023-01-25_10-19-25.fthypt'.
+2023-01-25 13:51:06,739 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/tEST/freqtrade/user_data/strategies/LuxOSC1_1.json
+
+Best result:
+
+    56/100:   1351 trades. 909/245/197 Wins/Draws/Losses. Avg profit   0.14%. Median profit   0.21%. Total profit 1751.04671752 USDT (  17.51%). Avg duration 10:17:00 min. Objective: -1751.04672
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "cross_buy": -67,
+        "length_buy": 35,
+        "mult_buy": 18,
+        "short_cross": 83,
+        "smooth_buy": 88,
+    }
+
+    # Sell hyperspace params:
+    sell_params = {
+        "cross_sell": -85,
+    }
+
+    # ROI table:
+    minimal_roi = {
+        "0": 0.124,
+        "17": 0.03,
+        "37": 0.01,
+        "127": 0
+    }
+
+    # Stoploss:
+    stoploss = -0.269
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy
+

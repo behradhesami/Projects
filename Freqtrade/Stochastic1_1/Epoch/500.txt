@@ -1,0 +1,47 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |   Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------|
+| * Best |  11/200 |     1666 |   1060   282   324  63.6 |        0.03% |       113.617 USDT    (1.14%) | 0 days 09:48:00 |    -113.617 |      2432.315 USDT   (21.67%) |
+| * Best |  13/200 |     1576 |    982   321   273  62.3 |        0.14% |      1160.319 USDT   (11.60%) | 0 days 12:35:00 | -1,160.31922 |      2736.703 USDT   (19.69%) |
+| * Best |  19/200 |     1801 |   1043   507   251  57.9 |        0.09% |      1164.080 USDT   (11.64%) | 0 days 12:33:00 | -1,164.07972 |      2420.507 USDT   (17.82%) |
+| * Best |  29/200 |     1485 |   1028   225   232  69.2 |        0.08% |      1403.462 USDT   (14.03%) | 0 days 14:45:00 | -1,403.46156 |      2702.554 USDT   (19.16%) |
+|   Best |  39/200 |     1522 |   1052   198   272  69.1 |        0.11% |      1692.537 USDT   (16.93%) | 0 days 14:45:00 | -1,692.53715 |      2049.412 USDT   (14.91%) |
+|   Best |  44/200 |     1539 |   1006   290   243  65.4 |        0.15% |      1768.984 USDT   (17.69%) | 0 days 13:46:00 | -1,768.98417 |      1872.092 USDT   (13.72%) |
+|   Best |  59/200 |     2232 |   1310   630   292  58.7 |        0.20% |      4009.672 USDT   (40.10%) | 0 days 10:33:00 | -4,009.67208 |      1586.216 USDT   (10.17%) |
+|   Best |  66/200 |     2375 |   1370   660   345  57.7 |        0.22% |      4241.343 USDT   (42.41%) | 0 days 09:25:00 | -4,241.34287 |      1814.113 USDT   (11.30%) |
+|   Best | 122/200 |     1842 |   1234   320   288  67.0 |        0.20% |      4269.452 USDT   (42.69%) | 0 days 12:45:00 | -4,269.45228 |      1122.776 USDT    (7.29%) |
+|   Best | 138/200 |     1906 |   1250   289   367  65.6 |        0.32% |      4947.113 USDT   (49.47%) | 0 days 13:12:00 | -4,947.11261 |      1502.551 USDT    (9.13%) |
+ [Epoch 200 of 200 (100%)] ||                                                                                       | [Time:  7:06:41, Elapsed Time: 7:06:41]
+2023-01-10 19:04:21,866 - freqtrade.optimize.hyperopt - INFO - 200 epochs saved to '/root/Desktop/freqtrade/freqtrade/user_data/hyperopt_results/strategy_zemastoch1_1_2023-01-10_11-54-16.fthypt'.
+2023-01-10 19:04:21,880 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/freqtrade/freqtrade/user_data/strategies/zemastoch1_1.json
+
+Best result:
+
+   138/200:   1906 trades. 1250/289/367 Wins/Draws/Losses. Avg profit   0.32%. Median profit   0.04%. Total profit 4947.11260960 USDT (  49.47%). Avg duration 13:12:00 min. Objective: -4947.11261
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "ema_fast_period": 29,
+        "ema_long_period": 15,
+        "fastd_period": 5,
+        "fastk_period": 3,
+        "lenght_period": 14,
+    }
+
+    # ROI table:
+    minimal_roi = {
+        "0": 0.09,
+        "31": 0.032,
+        "88": 0.018,
+        "199": 0
+    }
+
+    # Stoploss:
+    stoploss = -0.257
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy

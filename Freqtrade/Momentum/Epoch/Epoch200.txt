@@ -1,0 +1,48 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |   Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------|
+| * Best |   2/100 |     1022 |    490   366   166  47.9 |       -0.08% |       -93.038 USDT   (-9.30%) | 0 days 14:01:00 |     93.0376 |       178.414 USDT   (16.62%) |
+| * Best |   4/100 |     1280 |    603   499   178  47.1 |       -0.07% |       -90.379 USDT   (-9.04%) | 0 days 11:05:00 |     90.3786 |       141.893 USDT   (13.49%) |
+| * Best |   5/100 |      984 |    471   341   172  47.9 |       -0.00% |       -18.372 USDT   (-1.84%) | 0 days 14:35:00 |     18.3724 |       141.632 USDT   (12.61%) |
+| * Best |  26/100 |      893 |    455   280   158  51.0 |       -0.02% |       -18.372 USDT   (-1.84%) | 0 days 16:00:00 |     18.3718 |       187.224 USDT   (16.69%) |
+| * Best |  30/100 |     1924 |    900   735   289  46.8 |        0.01% |         6.485 USDT    (0.65%) | 0 days 07:16:00 |    -6.48466 |       189.710 USDT   (16.67%) |
+|   Best |  35/100 |     1031 |    577   273   181  56.0 |        0.10% |        93.847 USDT    (9.38%) | 0 days 13:53:00 |    -93.8465 |       174.315 USDT   (14.80%) |
+|   Best |  41/100 |     1281 |    642   462   177  50.1 |        0.09% |       114.388 USDT   (11.44%) | 0 days 11:05:00 |    -114.388 |       130.158 USDT   (11.50%) |
+|   Best |  62/100 |     1203 |    557   467   179  46.3 |        0.15% |       195.751 USDT   (19.58%) | 0 days 11:51:00 |    -195.751 |       152.354 USDT   (12.70%) |
+|   Best |  95/100 |     1192 |    575   435   182  48.2 |        0.20% |       268.055 USDT   (26.81%) | 0 days 11:56:00 |    -268.055 |       179.801 USDT   (15.27%) |
+ [Epoch 100 of 100 (100%)] ||                                                                                       | [Time:  2:25:23, Elapsed Time: 2:25:23]
+2023-01-17 16:45:09,730 - freqtrade.optimize.hyperopt - INFO - 100 epochs saved to '/root/Desktop/freqtrade/freqtrade/user_data/hyperopt_results/strategy_Momentum_OPT_2023-01-17_14-16-59.fthypt'.
+2023-01-17 16:45:09,731 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/freqtrade/freqtrade/user_data/strategies/Momentum_OPT.json
+
+Best result:
+
+    95/100:   1192 trades. 575/435/182 Wins/Draws/Losses. Avg profit   0.20%. Median profit   0.00%. Total profit 268.05476574 USDT (  26.81%). Avg duration 11:56:00 min. Objective: -268.05477
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "fast_macd": 5,
+        "fastk_period": 6,
+        "rsi_period": 97,
+        "signal_period": 23,
+        "slow_macd": 2,
+        "slowd_period": 12,
+        "slowk_period": 8,
+    }
+
+    # ROI table:
+    minimal_roi = {
+        "0": 0.065,
+        "18": 0.042,
+        "35": 0.013,
+        "51": 0
+    }
+
+    # Stoploss:
+    stoploss = -0.298
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy

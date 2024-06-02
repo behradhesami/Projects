@@ -1,0 +1,45 @@
++--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------+
+|   Best |   Epoch |   Trades |    Win  Draw  Loss  Win% |   Avg profit |                        Profit |    Avg duration |   Objective |           Max Drawdown (Acct) |
+|--------+---------+----------+--------------------------+--------------+-------------------------------+-----------------+-------------+-------------------------------|
+| * Best |   3/100 |     2661 |   1376   701   584  51.7 |       -0.01% |       -37.343 USDT   (-3.73%) | 0 days 05:12:00 |     37.3434 |       147.827 USDT   (14.22%) |
+/root/Desktop/freqtrade/env/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py:700: UserWarning: A worker stopped while some jobs were given to the executor. This can be caused by a too short worker timeout or by a memory leak.
+  warnings.warn(
+| * Best |  17/100 |     1298 |    808   210   280  62.2 |        0.07% |        62.406 USDT    (6.24%) | 0 days 10:54:00 |    -62.4059 |       154.508 USDT   (13.11%) |
+|   Best |  33/100 |     1214 |    770   149   295  63.4 |        0.22% |       271.380 USDT   (27.14%) | 0 days 11:40:00 |     -271.38 |       210.112 USDT   (15.01%) |
+ [Epoch 100 of 100 (100%)] ||                                                                                       | [Time:  2:36:01, Elapsed Time: 2:36:01]
+2023-01-17 13:27:59,292 - freqtrade.optimize.hyperopt - INFO - 100 epochs saved to '/root/Desktop/freqtrade/freqtrade/user_data/hyperopt_results/strategy_Momentum_OPT_2023-01-17_10-49-15.fthypt'.
+2023-01-17 13:27:59,293 - freqtrade.optimize.hyperopt_tools - INFO - Dumping parameters to /root/Desktop/freqtrade/freqtrade/user_data/strategies/Momentum_OPT.json
+
+Best result:
+
+    33/100:   1214 trades. 770/149/295 Wins/Draws/Losses. Avg profit   0.22%. Median profit   0.02%. Total profit 271.37992196 USDT (  27.14%). Avg duration 11:40:00 min. Objective: -271.37992
+
+
+    # Buy hyperspace params:
+    buy_params = {
+        "fast_macd": 18,
+        "fastk_period": 18,
+        "rsi_period": 93,
+        "signal_period": 23,
+        "slow_macd": 13,
+        "slowd_period": 24,
+        "slowk_period": 24,
+    }
+
+    # ROI table:
+    minimal_roi = {
+        "0": 0.089,
+        "35": 0.077,
+        "86": 0.04,
+        "205": 0
+    }
+
+    # Stoploss:
+    stoploss = -0.119
+
+    # Trailing stop:
+    trailing_stop = False  # value loaded from strategy
+    trailing_stop_positive = None  # value loaded from strategy
+    trailing_stop_positive_offset = 0.0  # value loaded from strategy
+    trailing_only_offset_is_reached = False  # value loaded from strategy
+    
